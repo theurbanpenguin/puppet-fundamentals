@@ -1,0 +1,2 @@
+ntp_conf: /etc/chrony.conf
+ntp_service: chronyd

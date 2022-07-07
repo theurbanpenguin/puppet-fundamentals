@@ -1,0 +1,2 @@
+ntp_conf: /etc/chrony/chrony.conf
+ntp_service: chrony
