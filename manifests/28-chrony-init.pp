@@ -15,7 +15,7 @@ String $ntp_server = 'time.apple.com',
     notify => Service[$ntp_service],
   }
 
-  service { 'chrony':
+  service { $ntp_service:
     ensure  => running,
     enable  => true,
     require => Package['chrony']
