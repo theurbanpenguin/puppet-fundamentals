@@ -1,4 +1,5 @@
-pool <%= $chrony::ntp_server %> iburst maxsources 4
+server <%= $chrony::ntp_server %> iburst prefer
+pool <%= $chrony::ntp_pool %> iburst maxsources 3
 keyfile /etc/chrony/chrony.keys
 driftfile /var/lib/chrony/chrony.drift
 logdir /var/log/chrony

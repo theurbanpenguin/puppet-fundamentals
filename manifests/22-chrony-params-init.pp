@@ -1,5 +1,6 @@
 class chrony (
 String $ntp_server = 'time.apple.com',
+String $ntp_pool = '0.ubuntu.pool.ntp.org',
 )  {
 
   $ntp_service = $facts['os']['family'] ? {
