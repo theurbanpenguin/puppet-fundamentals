@@ -1,0 +1,17 @@
+description: Add puppet agent and ensure it is running
+parameters:
+  targets:
+    type: TargetSpec
+    description: A list of targets to run actions on
+    default: localhost
+
+steps:
+  - name: add_host_entry
+    script: agent/hosts.sh
+    targets: $targets
+  - name: install_agent
+    task: puppet_agent::install
+    targets: $targets
+  - name: start_service
+    command: /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
+    targets: $targets
