@@ -1,3 +1,3 @@
 if ! grep -q 'puppet' /etc/hosts; then
-    echo '1.3.4.6 puppet' >> /etc/hosts
+    echo '3.8.167.80 puppet' >> /etc/hosts
 fi

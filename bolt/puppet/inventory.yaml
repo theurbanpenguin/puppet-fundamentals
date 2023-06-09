@@ -1,0 +1,16 @@
+targets:
+  - uri: rocky
+    alias: rocky-agent
+  - uri: ubuntu
+    alias: ubuntu-agent
+
+groups:
+  - name: linux
+    targets:
+      - rocky-agent
+      - ubuntu-agent
+config:
+  ssh:
+    host-key-check: false
+    password: '[Password1]'
+    user: tux
